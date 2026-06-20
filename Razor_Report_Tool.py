@@ -9,8 +9,8 @@ from openpyxl.utils import get_column_letter
 load_dotenv()
 
 # --- SQL Server connection details ---
-server_ip = os.getenv("DB_SERVER", r"DESKTOP-U3MJ8IT\\SQLEXPRESS")
-database = os.getenv("DB_NAME", "SPAYINDIADB")
+server_ip = os.getenv("DB_SERVER", "your_server_name_here")
+database = os.getenv("DB_NAME", "your_database_name_here")
 driver = os.getenv("DB_DRIVER", "ODBC Driver 17 for SQL Server")
 
 
