@@ -1,13 +1,17 @@
 import pandas as pd
 import os
+from dotenv import load_dotenv
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-# --- SQL Server connection details (left as is for local environment) ---
-server_ip = r'DESKTOP-U3MJ8IT\\SQLEXPRESS'
-database = 'SPAYINDIADB'
-driver = 'ODBC Driver 17 for SQL Server'
+# Load environment variables securely from .env
+load_dotenv()
+
+# --- SQL Server connection details ---
+server_ip = os.getenv("DB_SERVER", r"DESKTOP-U3MJ8IT\\SQLEXPRESS")
+database = os.getenv("DB_NAME", "SPAYINDIADB")
+driver = os.getenv("DB_DRIVER", "ODBC Driver 17 for SQL Server")
 
 
 def generate_report(razor_orders_file: str, payments_report_file: str, asm_file: str, output_dir: str) -> bool:
