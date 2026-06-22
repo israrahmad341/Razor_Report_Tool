@@ -1,4 +1,4 @@
-﻿# ðŸ’³ Razor Report Tool (Payment Reconciliation System)
+﻿#  Razor Report Tool (Payment Reconciliation System)
 
 **The Problem:** 
 Manually aggregating and reconciling complex PG-2 and PG-5 transaction streams to count active merchants and flag anomalies took immense effort and caused severe reporting bottlenecks for the team.
